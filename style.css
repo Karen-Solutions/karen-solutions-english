@@ -1,0 +1,630 @@
+/* =========================================
+   KAREN SOLUTIONS: MY ENGLISH JOURNEY
+   Main stylesheet
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fc;
+    color: #25283d;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =========================================
+   HEADER / NAVIGATION
+========================================= */
+
+.header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e8e8ef;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 72px;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #22233b;
+}
+
+.logo span {
+    color: #7056d8;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #55576a;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #7056d8;
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #25283d;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 630px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 90px 30px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(112, 86, 216, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(236, 116, 159, 0.14),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #faf9ff,
+            #f3f1ff
+        );
+}
+
+.hero-content {
+    max-width: 850px;
+    text-align: center;
+}
+
+.small-title,
+.section-label {
+    color: #7056d8;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+    color: #22233b;
+}
+
+.hero h1 span {
+    display: block;
+    color: #7056d8;
+}
+
+.hero-text {
+    max-width: 690px;
+    margin: 0 auto 35px;
+    color: #626477;
+    font-size: 1.08rem;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #7056d8;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #5d45c0;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: white;
+    border: 1px solid #dad8e8;
+    color: #35364d;
+}
+
+.secondary-btn:hover {
+    border-color: #7056d8;
+    color: #7056d8;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: #22233b;
+    font-size: 2.5rem;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.section-heading > p:last-child {
+    color: #737487;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #ececf2;
+
+    box-shadow:
+        0 12px 35px rgba(37, 40, 61, 0.06);
+}
+
+.about-card h3 {
+    color: #7056d8;
+    margin-bottom: 17px;
+    font-size: 1.25rem;
+}
+
+.about-card p {
+    color: #656678;
+    margin-bottom: 15px;
+}
+
+.about-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   BLOG
+========================================= */
+
+.blog-section {
+    max-width: none;
+    background: #ffffff;
+}
+
+.blog-section .section-heading,
+.posts-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.post-card {
+    position: relative;
+    overflow: hidden;
+
+    background: #f9f9fc;
+    border: 1px solid #ebebf1;
+    border-radius: 20px;
+
+    padding: 34px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 45px rgba(37, 40, 61, 0.10);
+}
+
+.post-number {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+
+    color: #e1ddef;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.post-content {
+    position: relative;
+    z-index: 2;
+}
+
+.category {
+    display: inline-block;
+
+    color: #7056d8;
+    background: #ece8ff;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+
+    margin-bottom: 18px;
+}
+
+.post-card h3 {
+    max-width: 85%;
+    color: #292a40;
+    font-size: 1.4rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.post-card p {
+    color: #68697a;
+    font-size: 0.94rem;
+    margin-bottom: 15px;
+}
+
+.post-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Special styling for required SENA topics */
+
+.featured-post {
+    background:
+        linear-gradient(
+            145deg,
+            #f6f3ff,
+            #ffffff
+        );
+
+    border: 1px solid #ddd6fa;
+}
+
+.featured-post::before {
+    content: "";
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(112, 86, 216, 0.07);
+
+    top: -70px;
+    left: -70px;
+}
+
+
+/* Last blog entry centered on desktop */
+
+.post-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 750px;
+    width: 100%;
+    justify-self: center;
+}
+
+
+/* =========================================
+   LEARNING REFLECTION
+========================================= */
+
+.learning-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.learning-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+
+    padding: 60px 50px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #292640,
+            #4a3d7a
+        );
+
+    color: white;
+
+    box-shadow:
+        0 20px 50px rgba(37, 40, 61, 0.18);
+}
+
+.learning-box .section-label {
+    color: #c9bbff;
+}
+
+.learning-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    line-height: 1.25;
+}
+
+.learning-box p {
+    max-width: 720px;
+    margin: 0 auto 16px;
+    color: #e8e6f0;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    text-align: center;
+    background: #222231;
+    color: #c9c9d2;
+    padding: 45px 25px;
+    font-size: 0.85rem;
+}
+
+.footer strong {
+    color: white;
+    font-size: 1rem;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   ANIMATION CLASS
+   JavaScript will activate this
+========================================= */
+
+.post-card {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.post-card.show {
+    opacity: 1;
+    transform: translateY(0);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        box-shadow 0.3s ease;
+}
+
+.post-card.show:hover {
+    transform: translateY(-6px);
+}
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .about-content,
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 72px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        padding: 25px;
+
+        flex-direction: column;
+        gap: 20px;
+
+        border-bottom: 1px solid #ececf2;
+
+        box-shadow:
+            0 12px 30px rgba(37, 40, 61, 0.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 75px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .about-card,
+    .post-card {
+        padding: 27px;
+    }
+
+    .post-number {
+        font-size: 2.8rem;
+    }
+
+    .post-card h3 {
+        max-width: 90%;
+        font-size: 1.25rem;
+    }
+
+    .learning-box {
+        padding: 45px 25px;
+    }
+
+    .learning-box h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-width: 420px) {
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .post-card {
+        padding: 23px;
+    }
+}
